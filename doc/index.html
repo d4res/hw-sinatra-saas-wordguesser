@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  File: README
+  
+    &mdash; Documentation by YARD 0.9.28
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" />
+
+<script type="text/javascript">
+  pathId = "README";
+  relpath = '';
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div class="nav_wrap">
+      <iframe id="nav" src="class_list.html?1"></iframe>
+      <div id="resizer"></div>
+    </div>
+
+    <div id="main" tabindex="-1">
+      <div id="header">
+        <div id="menu">
+  
+    <a href="_index.html">Index</a> &raquo; 
+    <span class="title">File: README</span>
+  
+</div>
+
+        <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+
+        <svg width="24" height="24">
+          <rect x="0" y="4" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="12" width="24" height="4" rx="1" ry="1"></rect>
+          <rect x="0" y="20" width="24" height="4" rx="1" ry="1"></rect>
+        </svg>
+    </a>
+  
+</div>
+        <div class="clear"></div>
+      </div>
+
+      <div id="content"><div id='filecontents'><h1 id="wordguesser-a-scaffolded--esaas-getting-started-assignment">Wordguesser: a scaffolded (!) ESaaS getting-started assignment</h1>
+
+<p>(v1.1, September 2015.  Written by Armando Fox and Nick Herson)
+(some edits by mverdicchio 21 September 2015)
+(refinements by Armando Fox September 2017)</p>
+
+<p>In this assignment you’ll be introduced to part of the basic cycle of creating SaaS in a disciplined way.</p>
+
+<p><strong>NOTE: Do not clone this repo to your workspace. Fork it first, then clone your fork.</strong></p>
+
+<h2 id="learning-goals">Learning Goals</h2>
+<p>After completing this assignment, you will be able to:</p>
+
+<ul>
+  <li>Create and deploy simple SaaS apps in your development environment, and deploy them to the public cloud</li>
+  <li>Practice the basic workflow of test-driven development (TDD), in which tests are written before the code (so they fail when first run) and code is then added to make them pass</li>
+  <li>Understand how SaaS frameworks such as Sinatra support the conceptual components of a three-tier SaaS application architecture</li>
+  <li>Understand the challenges of adapting a non-SaaS application to a SaaS environment, including how to identify and manage application state</li>
+  <li>Understand one use case of service-oriented architecture, in which your SaaS app relies on an external service’s API (application programming interface) to provide part of the SaaS app’s functionality.</li>
+</ul>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+  <li>You should be familiar with Ruby basics, for example by completing the Ruby Intro or Ruby Calisthenics assignment.</li>
+  <li>You should have read <a href="http://www.saasbook.info">ESaaS</a> Chapter 2, “The Architecture of SaaS Applications”, and watched the accompanying videos in the <a href="http://www.saas-class.org">MOOC</a>.</li>
+  <li>You should be comfortable with basic Git usage and how to push your code to GitHub, as described in Appendix A of <a href="http://www.saasbook.info">ESaaS</a>.</li>
+  <li>You will need “survival level” Unix command-line skills and facility with an editor to edit code files.</li>
+</ul>
+
+<p><strong>NOTE: You may find the <a href="https://sinatrarb.com">Sinatra documentation</a> helpful to have on hand.</strong></p>
+
+<h2 id="introduction">Introduction</h2>
+<p>The full Agile/XP cycle we follow in ESaaS includes talking to the customer, using BDD to develop scenarios, turning those scenarios into runnable integration/acceptance tests with Cucumber, using those scenarios plus TDD to drive the creation of actual code, and deploying the result of each iteration’s work to the cloud.</p>
+
+<p>In this introductory assignment, we’ve provided RSpec unit tests to let you use TDD to develop game logic for a word-guessing game.  In the full Agile/XP cycle, you’d develop these tests yourself as you code.</p>
+
+<p>You’ll then use the Sinatra framework to make the Wordguesser game available as SaaS. Adapting the game logic for SaaS will introduce you to thinking about RESTful routes and service-oriented architecture. As you develop the “SaaS-ified” Wordguessing game, you’ll use Cucumber to describe how gameplay will work from the player’s point of view and as “full stack” integration tests that will drive SaaS development.  In the full Agile/XP cycle, you’d develop Cucumber scenarios yourself based on consultation with the customer, and create the necessary <em>step definitions</em> (Cucumber code that turns plain-English scenarios into runnable tests).  In this assignment we provide both the scenarios and step definitions for you.</p>
+
+<p>You’ll deploy your game to the cloud using Heroku, giving you experience in automating SaaS deployment.</p>
+
+<p><strong>Why Sinatra?</strong></p>
+
+<p>This assignment uses the simple <a href="https://github.com/sinatra/sinatra">Sinatra</a> framework rather than Rails, so that you can focus on tools, mechanics, and SaaS concepts, all of which will readily map to Rails later.  Since our app doesn’t have a database and has very few functions, Sinatra is an easy way to get started.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li>Part 0: <a href="docs/part_0_create_saas_app.md">Demystifying SaaS app creation</a></li>
+  <li>Part 1: <a href="docs/part_1_wordguesser.md">Wordguesser</a></li>
+  <li>Part 2: <a href="docs/part_2_restful_thinking.md">RESTful thinking for Wordguesser</a></li>
+  <li>Part 3: <a href="docs/part_3_connecting_wordguesser_to_sinatra.md">Connecting WordGuesserGame to Sinatra</a></li>
+  <li>Part 4: <a href="docs/part_4_cucumber.md">Introducing Cucumber</a></li>
+  <li>Part 5: <a href="docs/part_5_corner_cases.md">Corner Cases</a></li>
+  <li>Part 6: <a href="docs/part_6_conclusion.md">Conclusion</a></li>
+  <li>Part 7: <a href="docs/part_7_optional_challenge.md">Optional Challenge Assignment</a></li>
+</ul>
+</div></div>
+
+      <div id="footer">
+  Generated on Wed Sep 21 14:54:28 2022 by
+  <a href="https://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.9.28 (ruby-2.6.6).
+</div>
+
+    </div>
+  </body>
+</html>
