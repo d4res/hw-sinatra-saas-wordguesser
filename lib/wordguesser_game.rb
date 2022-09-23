@@ -59,6 +59,7 @@ class WordGuesserGame
   end
 
   def check_win_or_lose
+    byebug
     return :win if word_with_guesses == @word
     return :lose if @try > 7
     return :play if @try < 7
