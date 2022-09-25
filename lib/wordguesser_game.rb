@@ -32,12 +32,13 @@ class WordGuesserGame
   # @return [Bool] <description>
   #
   def guess(c)
-    @try += 1
-    throw ArgumentError if c.nil?
-    throw ArgumentError unless c.downcase <= 'z' && c.downcase >= 'a'
-    throw ArgumentError if c == ''
+    raise ArgumentError if c.nil?
+
+    raise ArgumentError unless c.downcase <= 'z' && c.downcase >= 'a'
+    raise ArgumentError if c == ''
     return false if (@guesses.include? c.downcase) || (@wrong_guesses.include? c.downcase)
 
+    @try += 1
     if @word.include? c
       @guesses += c
     else
@@ -59,7 +60,6 @@ class WordGuesserGame
   end
 
   def check_win_or_lose
-    byebug
     return :win if word_with_guesses == @word
     return :lose if @try > 7
     return :play if @try < 7
